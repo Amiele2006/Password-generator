@@ -20,7 +20,7 @@ buttons.addEventListener('click',function(){
         let length = parseInt(prompt("Enter the password length:", "12"), 10);
 
         // Validate the input
-        if (isNaN(length) || length < 16 || length > 20) {
+        if (isNaN(length) || length < 12 || length > 16) {
             alert("Invalid length. Please enter a number between 12 and 16.");
         } else {
             // Generate and display passwords
