@@ -17,11 +17,11 @@ function generateRandomPassword(length) {
 
 buttons.addEventListener('click',function(){
      // Prompt user for password length
-        let length = parseInt(prompt("Enter the password length:", "15"), 10);
+        let length = parseInt(prompt("Enter the password length:", "12"), 10);
 
         // Validate the input
-        if (isNaN(length) || length <= 0) {
-            alert("Invalid length. Please enter a positive number.");
+        if (isNaN(length) || length < 16 || length > 20) {
+            alert("Invalid length. Please enter a number between 12 and 16.");
         } else {
             // Generate and display passwords
             const password1 = generateRandomPassword(length);
