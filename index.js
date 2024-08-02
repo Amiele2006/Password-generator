@@ -4,7 +4,6 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 const buttons = document.getElementById("Generate")
 const btn1 = document.getElementById("btn1")
 const btn2 = document.getElementById("btn2")
-const textArea = document.getElementsByClassName("button");
 
 function generateRandomPassword(length) {
             let password = "";
@@ -31,7 +30,8 @@ function copyToClipboard() {
     }
 }
 
-textArea.addEventListener("click", copyToClipboard())
+btn1.addEventListener('click', copyToClipboard())
+btn2.addEventListener('click', copyToClipboard())
 
 buttons.addEventListener('click',function(){
      // Prompt user for password length
