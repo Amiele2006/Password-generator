@@ -4,6 +4,7 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 const buttons = document.getElementById("Generate")
 const btn1 = document.getElementById("btn1")
 const btn2 = document.getElementById("btn2")
+const textArea = document.getElementsByClassName("button");
 
 function generateRandomPassword(length) {
             let password = "";
@@ -16,7 +17,6 @@ function generateRandomPassword(length) {
 
 function copyToClipboard() {
     // Get the textarea element
-    const textArea = document.getElementsByClassName("button");
 
     // Select the text
     textArea.select();
@@ -30,6 +30,8 @@ function copyToClipboard() {
         alert('Failed to copy text.');
     }
 }
+
+textArea.addEventListener("click", copyToClipboard())
 
 buttons.addEventListener('click',function(){
      // Prompt user for password length
@@ -46,5 +48,5 @@ buttons.addEventListener('click',function(){
             btn1.textContent = password1
             btn2.textContent = password2
         }
-        copyToClipboard()
 })
+
