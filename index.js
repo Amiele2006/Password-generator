@@ -30,9 +30,6 @@ function copyToClipboard() {
     }
 }
 
-btn1.addEventListener('click', copyToClipboard())
-btn2.addEventListener('click', copyToClipboard())
-
 buttons.addEventListener('click',function(){
      // Prompt user for password length
         let length = parseInt(prompt("Enter the password length:", "12"), 10);
@@ -49,4 +46,7 @@ buttons.addEventListener('click',function(){
             btn2.textContent = password2
         }
 })
+
+btn1.addEventListener('click', copyToClipboard())
+btn2.addEventListener('click', copyToClipboard())
 
