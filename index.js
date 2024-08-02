@@ -14,6 +14,22 @@ function generateRandomPassword(length) {
             return password
 }
 
+function copyToClipboard() {
+    // Get the textarea element
+    const textArea = document.getElementsByClassName("button");
+
+    // Select the text
+    textArea.select();
+    textArea.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text to the clipboard
+    try {
+        document.execCommand('copy');
+        alert('Text copied to clipboard!');
+    } catch (err) {
+        alert('Failed to copy text.');
+    }
+}
 
 buttons.addEventListener('click',function(){
      // Prompt user for password length
@@ -30,4 +46,5 @@ buttons.addEventListener('click',function(){
             btn1.textContent = password1
             btn2.textContent = password2
         }
+        copyToClipboard()
 })
